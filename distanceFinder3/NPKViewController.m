@@ -24,20 +24,18 @@
 @property (strong, nonatomic) CLLocation          *lastLocation;
 @property (nonatomic)         CLLocationDirection *heading;
 @property (nonatomic)         BOOL                isUpdatingLocation;
-
+@property (strong, nonatomic) UIToolbar           *toolBar;
 
 @property (strong, nonatomic) NSMutableArray *pins;
-@property (strong, nonatomic) NSString *lengthType;
+@property (strong, nonatomic) NSString       *lengthType;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *locateButton;
-@property (weak, nonatomic) IBOutlet UIButton *areaButton;
-@property (weak, nonatomic) IBOutlet UIButton *deleteAreaButton;
-@property (weak, nonatomic) IBOutlet UIButton *deletePinButton;
 
-@property (nonatomic) BOOL isFindingArea;
+@property (nonatomic) BOOL    isFindingArea;
 @property (nonatomic) CGPoint startingPoint;
 @property (nonatomic) CGPoint endingPoint;
-@property (nonatomic) int count;
+@property (nonatomic) int     count;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *convertButton;
 @property(nonatomic) BOOL firstTimeUpdatingMap;
@@ -46,22 +44,22 @@
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapRecognizer;
 
 
-@property (strong, nonatomic) MKPolyline *routeLine;
+@property (strong, nonatomic) MKPolyline         *routeLine;
 @property (strong, nonatomic) MKPolylineRenderer *routeLineView;
-@property (strong, nonatomic) NSMutableArray *routeLines;
-
-@property (strong, nonatomic) UIView *areaOverlay;
+@property (strong, nonatomic) NSMutableArray     *routeLines;
+@property (strong, nonatomic) UIView             *areaOverlay;
 @property (strong, nonatomic) NPKOverlayAreaView *areaView;
-@property (strong, nonatomic) MKPolygonRenderer *polygonRenderer;
-@property (strong, nonatomic) NSMutableArray *areaPoints;
-@property (strong, nonatomic) NSMutableArray *areaViews;
+@property (strong, nonatomic) MKPolygonRenderer  *polygonRenderer;
+@property (strong, nonatomic) NSMutableArray     *areaPoints;
+@property (strong, nonatomic) NSMutableArray     *areaViews;
+@property (strong, nonatomic) UIButton           *areaButton;
+@property (strong, nonatomic) NSMutableArray     *lineDistances;
 
 
 
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property (strong, nonatomic) NSMutableArray *matchingItems;
 
-@property (strong, nonatomic) NSMutableArray *lineDistances;
 
  
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
@@ -77,51 +75,18 @@
     
     self.identifier           = @"myAnnotation";
     self.count                = 0;
-    self.isUpdatingLocation   = nil;
-    self.firstTimeUpdatingMap = YES;
-    self.searchField.delegate = self;
-    self.locationManager      = [[CLLocationManager alloc] init];
-    self.mainMap              = [[MKMapView alloc] initWithFrame:self.view.frame];
-    self.mainMap.mapType      = MKMapTypeSatellite;
-    self.mainMap.delegate     = self;
-    self.pins                 = [[NSMutableArray alloc] init];
-    self.areaView             = [[NPKOverlayAreaView alloc]  init];
-    self.areaPoints           = [[NSMutableArray alloc] init];
-    self.areaViews            = [[NSMutableArray alloc]  init];
-    self.routeLines           = [[NSMutableArray alloc] init];
-    self.lengthType           = @"meter";
     
+    [self initializeMapComponents];
+    [self initializeToolBar];
+
     self.navigationController.toolbarHidden = NO;
     
-    [self.locationManager setDelegate:self];
-    [self.locationManager requestAlwaysAuthorization];
-    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-
-
-    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(00,
-                                                                    self.view.frame.size.height,
-                                                                    self.view.frame.size.width,
-                                                                    44)];
     
-    UILongPressGestureRecognizer * longPressGesturePins  = [[UILongPressGestureRecognizer alloc]
-                                                                initWithTarget:self
-                                                                action:@selector(longPressDeletePins)];
-    UILongPressGestureRecognizer * longPressGestureAreas = [[UILongPressGestureRecognizer alloc]
-                                                                initWithTarget:self
-                                                                action:@selector(longPressDeleteAreas)];
-
-    [longPressGesturePins setMinimumPressDuration:1];
-    [longPressGesturePins setMinimumPressDuration:1];
-
-    
-    [self.deletePinButton  addGestureRecognizer:longPressGesturePins];
-    [self.deleteAreaButton addGestureRecognizer:longPressGestureAreas];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-    [self.view addGestureRecognizer:tap];
     
+    [self.view addGestureRecognizer:tap];
     [self.view addSubview:self.mainMap];
-    [self.view addSubview:toolBar];
-
+    
     
     UIDevice* device = [UIDevice currentDevice];
     BOOL backgroundSupported = NO;
@@ -136,6 +101,70 @@
     
 }
 
+-(void)initializeMapComponents
+{
+    self.isUpdatingLocation   = nil;
+    self.firstTimeUpdatingMap = YES;
+    self.searchField.delegate = self;
+    self.locationManager      = [[CLLocationManager alloc] init];
+    self.mainMap              = [[MKMapView alloc] initWithFrame:self.view.frame];
+    self.mainMap.mapType      = MKMapTypeSatellite;
+    self.mainMap.delegate     = self;
+    self.pins                 = [[NSMutableArray alloc] init];
+    self.areaView             = [[NPKOverlayAreaView alloc]  init];
+    self.areaPoints           = [[NSMutableArray alloc] init];
+    self.areaViews            = [[NSMutableArray alloc]  init];
+    self.routeLines           = [[NSMutableArray alloc] init];
+    self.lengthType           = @"meter";
+    
+    [self.locationManager setDelegate:self];
+    [self.locationManager requestAlwaysAuthorization];
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+}
+
+-(void)initializeToolBar
+{
+    
+    self.toolBar = self.navigationController.toolbar;
+    
+    UILongPressGestureRecognizer * longPressGesturePins  = [[UILongPressGestureRecognizer alloc]
+                                                            initWithTarget:self
+                                                            action:@selector(longPressDeletePins)];
+    UILongPressGestureRecognizer * longPressGestureAreas = [[UILongPressGestureRecognizer alloc]
+                                                            initWithTarget:self
+                                                            action:@selector(longPressDeleteAreas)];
+    
+    [longPressGesturePins setMinimumPressDuration:1];
+    [longPressGesturePins setMinimumPressDuration:1];
+    
+    UIButton *deletePinButton  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    UIButton *deleteAreaButton = [[UIButton alloc] initWithFrame:CGRectMake(60, 0, 50, 50)];
+    UIButton *areaButton       = [[UIButton alloc] initWithFrame:CGRectMake(90, 0, 50, 50)];
+    
+
+
+    [deletePinButton  setImage:[UIImage imageNamed:@"deletePin.png"]  forState:UIControlStateNormal];
+    [deleteAreaButton setImage:[UIImage imageNamed:@"deleteRect.png"] forState:UIControlStateNormal];
+    [areaButton       setImage:[UIImage imageNamed:@"area.png"]       forState:UIControlStateNormal];
+    [areaButton       setImage:[UIImage imageNamed:@"redRect.png"]    forState:UIControlStateSelected];
+
+    [deletePinButton  addTarget:self action:@selector(deletePin:)   forControlEvents:UIControlEventTouchUpInside];
+    [deleteAreaButton addTarget:self action:@selector(deleteArea:)  forControlEvents:UIControlEventTouchUpInside];
+    [areaButton       addTarget:self action:@selector(addAreaView:) forControlEvents:UIControlEventTouchUpInside];
+
+
+    [self.toolBar addSubview:deletePinButton];
+    [self.toolBar addSubview:deleteAreaButton];
+    [self.toolBar addSubview:areaButton];
+    
+    self.areaButton = areaButton;
+    
+    [deletePinButton  addGestureRecognizer:longPressGesturePins];
+    [deleteAreaButton addGestureRecognizer:longPressGestureAreas];
+    
+    MKUserTrackingBarButtonItem *locationButton = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mainMap];
+    self.navigationItem.rightBarButtonItem = locationButton;
+}
 
 
 
@@ -307,14 +336,21 @@
 
 - (IBAction)addAreaView:(id)sender
 {
-    [self.areaButton setImage:[UIImage imageNamed:@"redRect.png"] forState:UIControlStateNormal];
-    UIView *areaView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    if (!self.areaButton.selected) {
+        
+        UIView *areaView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        [self.areaButton setSelected:YES];
+        
+        UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+        [areaView addGestureRecognizer:gestureRecognizer];
+        self.areaOverlay= areaView;
+        
+        [self.view addSubview:areaView];
+    } else {
+        [self.areaButton setSelected:NO];
+        [self.areaOverlay removeFromSuperview];
+    }
 
-    UIPanGestureRecognizer *gestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-    [areaView addGestureRecognizer:gestureRecognizer];
-    self.areaOverlay= areaView;
-    
-    [self.view addSubview:areaView];
     
 }
 
@@ -376,7 +412,7 @@
         [self.areaViews  addObject:square];
         
         [self.areaOverlay removeFromSuperview];
-        [self.areaButton setImage:[UIImage imageNamed:@"area.png"] forState:UIControlStateNormal];
+        [self.areaButton setSelected:NO];
 
 
         [self calculateArea];
