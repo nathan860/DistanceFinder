@@ -116,6 +116,8 @@
     
     [self.deletePinButton  addGestureRecognizer:longPressGesturePins];
     [self.deleteAreaButton addGestureRecognizer:longPressGestureAreas];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    [self.view addGestureRecognizer:tap];
     
     [self.view addSubview:self.mainMap];
     [self.view addSubview:toolBar];
