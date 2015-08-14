@@ -1,0 +1,7 @@
+/* Localized versions of Info.plist keys */
+
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>The spirit of stack overflow is coders helping coders</string>
+
+<key>NSLocationAlwaysUsageDescription</key>
+<string>I have learned more on stack overflow than anything else</string>

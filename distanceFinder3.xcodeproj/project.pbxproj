@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50050095199BED8C00636F7E /* NPKOverlayAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50050094199BED8C00636F7E /* NPKOverlayAreaView.m */; };
+		500624F7182315BB0025500A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500624F6182315BB0025500A /* Foundation.framework */; };
+		500624F9182315BB0025500A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500624F8182315BB0025500A /* CoreGraphics.framework */; };
+		500624FB182315BB0025500A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500624FA182315BB0025500A /* UIKit.framework */; };
+		50062501182315BB0025500A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 500624FF182315BB0025500A /* InfoPlist.strings */; };
+		50062503182315BB0025500A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50062502182315BB0025500A /* main.m */; };
+		50062507182315BB0025500A /* NPKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50062506182315BB0025500A /* NPKAppDelegate.m */; };
+		5006250D182315BB0025500A /* NPKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5006250C182315BB0025500A /* NPKViewController.m */; };
+		5006250F182315BB0025500A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5006250E182315BB0025500A /* Images.xcassets */; };
+		50062516182315BB0025500A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50062515182315BB0025500A /* XCTest.framework */; };
+		50062517182315BB0025500A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500624F6182315BB0025500A /* Foundation.framework */; };
+		50062518182315BB0025500A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500624FA182315BB0025500A /* UIKit.framework */; };
+		50062520182315BB0025500A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5006251E182315BB0025500A /* InfoPlist.strings */; };
+		50062522182315BB0025500A /* distanceFinder3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50062521182315BB0025500A /* distanceFinder3Tests.m */; };
+		5006252C182846780025500A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5006252B182846780025500A /* CoreLocation.framework */; };
+		5006252E182847690025500A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5006252D182847690025500A /* MapKit.framework */; };
+		50423B3E183BF0E100437079 /* NPKLocationStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 50423B3D183BF0E100437079 /* NPKLocationStore.m */; };
+		507E89F3183070370084EEA9 /* NPKPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 507E89F2183070370084EEA9 /* NPKPin.m */; };
+		508C8ADA19ABF15D00F603F4 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AD919ABF15D00F603F4 /* icon@2x.png */; };
+		508C8ADC19ABF17600F603F4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8ADB19ABF17600F603F4 /* icon.png */; };
+		508C8AE519B1390100F603F4 /* deletePin.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AE419B1390100F603F4 /* deletePin.png */; };
+		508C8AE619B1390100F603F4 /* deletePin.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AE419B1390100F603F4 /* deletePin.png */; };
+		508C8AE819B1398400F603F4 /* 3- x w: pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AE719B1398400F603F4 /* 3- x w: pin.png */; };
+		508C8AE919B1398400F603F4 /* 3- x w: pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AE719B1398400F603F4 /* 3- x w: pin.png */; };
+		508C8AEB19B13BD700F603F4 /* deleteRect.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AEA19B13BD700F603F4 /* deleteRect.png */; };
+		508C8AEC19B13BD700F603F4 /* deleteRect.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AEA19B13BD700F603F4 /* deleteRect.png */; };
+		508C8AEE19B13D4B00F603F4 /* locatePurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AED19B13D4B00F603F4 /* locatePurple.png */; };
+		508C8AEF19B13D4B00F603F4 /* locatePurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AED19B13D4B00F603F4 /* locatePurple.png */; };
+		508C8AF119B145C200F603F4 /* area.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AF019B145C200F603F4 /* area.png */; };
+		508C8AF219B145C200F603F4 /* area.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AF019B145C200F603F4 /* area.png */; };
+		508C8AF419B1480500F603F4 /* redRect.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AF319B1480500F603F4 /* redRect.png */; };
+		508C8AF519B1480500F603F4 /* redRect.png in Resources */ = {isa = PBXBuildFile; fileRef = 508C8AF319B1480500F603F4 /* redRect.png */; };
+		509CC812196499DA00B2F882 /* NPKTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509CC811196499DA00B2F882 /* NPKTrackerViewController.m */; };
+		50E2B8CD198D8FCB00388D44 /* locate.png in Resources */ = {isa = PBXBuildFile; fileRef = 50E2B8CC198D8FCB00388D44 /* locate.png */; };
+		50E2B8CF198DA10B00388D44 /* trash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50E2B8CE198DA10B00388D44 /* trash.jpg */; };
+		50ED17D71B680DD00069E6C5 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 50ED17D61B680DD00069E6C5 /* marker.png */; };
+		50F4C9921B62F58D00F253CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F4C9911B62F58D00F253CE /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50062519182315BB0025500A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500624EB182315BB0025500A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 500624F2182315BB0025500A;
+			remoteInfo = distanceFinder3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		50050093199BED8C00636F7E /* NPKOverlayAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPKOverlayAreaView.h; sourceTree = "<group>"; };
+		50050094199BED8C00636F7E /* NPKOverlayAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPKOverlayAreaView.m; sourceTree = "<group>"; };
+		500624F3182315BB0025500A /* distanceFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = distanceFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		500624F6182315BB0025500A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		500624F8182315BB0025500A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		500624FA182315BB0025500A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		500624FE182315BB0025500A /* distanceFinder3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "distanceFinder3-Info.plist"; sourceTree = "<group>"; };
+		50062500182315BB0025500A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50062502182315BB0025500A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50062504182315BB0025500A /* distanceFinder3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "distanceFinder3-Prefix.pch"; sourceTree = "<group>"; };
+		50062505182315BB0025500A /* NPKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKAppDelegate.h; sourceTree = "<group>"; };
+		50062506182315BB0025500A /* NPKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKAppDelegate.m; sourceTree = "<group>"; };
+		5006250B182315BB0025500A /* NPKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPKViewController.h; sourceTree = "<group>"; };
+		5006250C182315BB0025500A /* NPKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPKViewController.m; sourceTree = "<group>"; };
+		5006250E182315BB0025500A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		50062514182315BB0025500A /* distanceFinder3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = distanceFinder3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50062515182315BB0025500A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5006251D182315BB0025500A /* distanceFinder3Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "distanceFinder3Tests-Info.plist"; sourceTree = "<group>"; };
+		5006251F182315BB0025500A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50062521182315BB0025500A /* distanceFinder3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = distanceFinder3Tests.m; sourceTree = "<group>"; };
+		5006252B182846780025500A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5006252D182847690025500A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		50423B3C183BF0E100437079 /* NPKLocationStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPKLocationStore.h; sourceTree = "<group>"; };
+		50423B3D183BF0E100437079 /* NPKLocationStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPKLocationStore.m; sourceTree = "<group>"; };
+		507E89F1183070370084EEA9 /* NPKPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPKPin.h; sourceTree = "<group>"; };
+		507E89F2183070370084EEA9 /* NPKPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPKPin.m; sourceTree = "<group>"; };
+		508C8AD919ABF15D00F603F4 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		508C8ADB19ABF17600F603F4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		508C8AE419B1390100F603F4 /* deletePin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deletePin.png; sourceTree = "<group>"; };
+		508C8AE719B1398400F603F4 /* 3- x w: pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3- x w: pin.png"; sourceTree = "<group>"; };
+		508C8AEA19B13BD700F603F4 /* deleteRect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deleteRect.png; sourceTree = "<group>"; };
+		508C8AED19B13D4B00F603F4 /* locatePurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locatePurple.png; sourceTree = "<group>"; };
+		508C8AF019B145C200F603F4 /* area.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = area.png; sourceTree = "<group>"; };
+		508C8AF319B1480500F603F4 /* redRect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redRect.png; sourceTree = "<group>"; };
+		509CC810196499DA00B2F882 /* NPKTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPKTrackerViewController.h; sourceTree = "<group>"; };
+		509CC811196499DA00B2F882 /* NPKTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPKTrackerViewController.m; sourceTree = "<group>"; };
+		50E2B8CC198D8FCB00388D44 /* locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locate.png; sourceTree = "<group>"; };
+		50E2B8CE198DA10B00388D44 /* trash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trash.jpg; sourceTree = "<group>"; };
+		50ED17D61B680DD00069E6C5 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker.png; sourceTree = "<group>"; };
+		50F4C9911B62F58D00F253CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		500624F0182315BB0025500A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5006252E182847690025500A /* MapKit.framework in Frameworks */,
+				5006252C182846780025500A /* CoreLocation.framework in Frameworks */,
+				500624F9182315BB0025500A /* CoreGraphics.framework in Frameworks */,
+				500624FB182315BB0025500A /* UIKit.framework in Frameworks */,
+				500624F7182315BB0025500A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50062511182315BB0025500A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50062516182315BB0025500A /* XCTest.framework in Frameworks */,
+				50062518182315BB0025500A /* UIKit.framework in Frameworks */,
+				50062517182315BB0025500A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		500624EA182315BB0025500A = {
+			isa = PBXGroup;
+			children = (
+				500624FC182315BB0025500A /* distanceFinder3 */,
+				5006251B182315BB0025500A /* distanceFinder3Tests */,
+				500624F5182315BB0025500A /* Frameworks */,
+				500624F4182315BB0025500A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		500624F4182315BB0025500A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				500624F3182315BB0025500A /* distanceFinder.app */,
+				50062514182315BB0025500A /* distanceFinder3Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		500624F5182315BB0025500A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5006252D182847690025500A /* MapKit.framework */,
+				5006252B182846780025500A /* CoreLocation.framework */,
+				500624F6182315BB0025500A /* Foundation.framework */,
+				500624F8182315BB0025500A /* CoreGraphics.framework */,
+				500624FA182315BB0025500A /* UIKit.framework */,
+				50062515182315BB0025500A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		500624FC182315BB0025500A /* distanceFinder3 */ = {
+			isa = PBXGroup;
+			children = (
+				50062505182315BB0025500A /* NPKAppDelegate.h */,
+				50062506182315BB0025500A /* NPKAppDelegate.m */,
+				50F4C9911B62F58D00F253CE /* Main.storyboard */,
+				5006250B182315BB0025500A /* NPKViewController.h */,
+				5006250C182315BB0025500A /* NPKViewController.m */,
+				509CC810196499DA00B2F882 /* NPKTrackerViewController.h */,
+				509CC811196499DA00B2F882 /* NPKTrackerViewController.m */,
+				50423B3C183BF0E100437079 /* NPKLocationStore.h */,
+				50423B3D183BF0E100437079 /* NPKLocationStore.m */,
+				507E89F1183070370084EEA9 /* NPKPin.h */,
+				507E89F2183070370084EEA9 /* NPKPin.m */,
+				50050093199BED8C00636F7E /* NPKOverlayAreaView.h */,
+				50050094199BED8C00636F7E /* NPKOverlayAreaView.m */,
+				5006250E182315BB0025500A /* Images.xcassets */,
+				500624FD182315BB0025500A /* Supporting Files */,
+			);
+			path = distanceFinder3;
+			sourceTree = "<group>";
+		};
+		500624FD182315BB0025500A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				508C8AD919ABF15D00F603F4 /* icon@2x.png */,
+				508C8AE719B1398400F603F4 /* 3- x w: pin.png */,
+				50E2B8CE198DA10B00388D44 /* trash.jpg */,
+				508C8AEA19B13BD700F603F4 /* deleteRect.png */,
+				50ED17D61B680DD00069E6C5 /* marker.png */,
+				508C8AF319B1480500F603F4 /* redRect.png */,
+				508C8AE419B1390100F603F4 /* deletePin.png */,
+				508C8AF019B145C200F603F4 /* area.png */,
+				508C8AED19B13D4B00F603F4 /* locatePurple.png */,
+				50E2B8CC198D8FCB00388D44 /* locate.png */,
+				508C8ADB19ABF17600F603F4 /* icon.png */,
+				500624FE182315BB0025500A /* distanceFinder3-Info.plist */,
+				500624FF182315BB0025500A /* InfoPlist.strings */,
+				50062502182315BB0025500A /* main.m */,
+				50062504182315BB0025500A /* distanceFinder3-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5006251B182315BB0025500A /* distanceFinder3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				50062521182315BB0025500A /* distanceFinder3Tests.m */,
+				5006251C182315BB0025500A /* Supporting Files */,
+			);
+			path = distanceFinder3Tests;
+			sourceTree = "<group>";
+		};
+		5006251C182315BB0025500A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5006251D182315BB0025500A /* distanceFinder3Tests-Info.plist */,
+				5006251E182315BB0025500A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		500624F2182315BB0025500A /* distanceFinder3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50062525182315BB0025500A /* Build configuration list for PBXNativeTarget "distanceFinder3" */;
+			buildPhases = (
+				500624EF182315BB0025500A /* Sources */,
+				500624F0182315BB0025500A /* Frameworks */,
+				500624F1182315BB0025500A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = distanceFinder3;
+			productName = distanceFinder3;
+			productReference = 500624F3182315BB0025500A /* distanceFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50062513182315BB0025500A /* distanceFinder3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50062528182315BB0025500A /* Build configuration list for PBXNativeTarget "distanceFinder3Tests" */;
+			buildPhases = (
+				50062510182315BB0025500A /* Sources */,
+				50062511182315BB0025500A /* Frameworks */,
+				50062512182315BB0025500A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5006251A182315BB0025500A /* PBXTargetDependency */,
+			);
+			name = distanceFinder3Tests;
+			productName = distanceFinder3Tests;
+			productReference = 50062514182315BB0025500A /* distanceFinder3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		500624EB182315BB0025500A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NPK;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Nathan Knable";
+				TargetAttributes = {
+					500624F2182315BB0025500A = {
+						DevelopmentTeam = 8LLV4BQDR3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					50062513182315BB0025500A = {
+						TestTargetID = 500624F2182315BB0025500A;
+					};
+				};
+			};
+			buildConfigurationList = 500624EE182315BB0025500A /* Build configuration list for PBXProject "distanceFinder3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 500624EA182315BB0025500A;
+			productRefGroup = 500624F4182315BB0025500A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				500624F2182315BB0025500A /* distanceFinder3 */,
+				50062513182315BB0025500A /* distanceFinder3Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		500624F1182315BB0025500A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5006250F182315BB0025500A /* Images.xcassets in Resources */,
+				508C8ADC19ABF17600F603F4 /* icon.png in Resources */,
+				508C8AE819B1398400F603F4 /* 3- x w: pin.png in Resources */,
+				508C8AEE19B13D4B00F603F4 /* locatePurple.png in Resources */,
+				508C8AE519B1390100F603F4 /* deletePin.png in Resources */,
+				508C8AEB19B13BD700F603F4 /* deleteRect.png in Resources */,
+				50E2B8CD198D8FCB00388D44 /* locate.png in Resources */,
+				50F4C9921B62F58D00F253CE /* Main.storyboard in Resources */,
+				50062501182315BB0025500A /* InfoPlist.strings in Resources */,
+				508C8AF119B145C200F603F4 /* area.png in Resources */,
+				508C8AF419B1480500F603F4 /* redRect.png in Resources */,
+				50E2B8CF198DA10B00388D44 /* trash.jpg in Resources */,
+				508C8ADA19ABF15D00F603F4 /* icon@2x.png in Resources */,
+				50ED17D71B680DD00069E6C5 /* marker.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50062512182315BB0025500A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				508C8AF519B1480500F603F4 /* redRect.png in Resources */,
+				508C8AE619B1390100F603F4 /* deletePin.png in Resources */,
+				508C8AEF19B13D4B00F603F4 /* locatePurple.png in Resources */,
+				508C8AF219B145C200F603F4 /* area.png in Resources */,
+				50062520182315BB0025500A /* InfoPlist.strings in Resources */,
+				508C8AEC19B13BD700F603F4 /* deleteRect.png in Resources */,
+				508C8AE919B1398400F603F4 /* 3- x w: pin.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		500624EF182315BB0025500A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50423B3E183BF0E100437079 /* NPKLocationStore.m in Sources */,
+				509CC812196499DA00B2F882 /* NPKTrackerViewController.m in Sources */,
+				50062507182315BB0025500A /* NPKAppDelegate.m in Sources */,
+				5006250D182315BB0025500A /* NPKViewController.m in Sources */,
+				50050095199BED8C00636F7E /* NPKOverlayAreaView.m in Sources */,
+				50062503182315BB0025500A /* main.m in Sources */,
+				507E89F3183070370084EEA9 /* NPKPin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50062510182315BB0025500A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50062522182315BB0025500A /* distanceFinder3Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5006251A182315BB0025500A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 500624F2182315BB0025500A /* distanceFinder3 */;
+			targetProxy = 50062519182315BB0025500A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		500624FF182315BB0025500A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50062500182315BB0025500A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5006251E182315BB0025500A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5006251F182315BB0025500A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50062523182315BB0025500A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Distance Finder";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50062524182315BB0025500A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "Distance Finder";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50062526182315BB0025500A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "distanceFinder3/distanceFinder3-Prefix.pch";
+				INFOPLIST_FILE = "distanceFinder3/distanceFinder3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = distanceFinder;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		50062527182315BB0025500A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "distanceFinder3/distanceFinder3-Prefix.pch";
+				INFOPLIST_FILE = "distanceFinder3/distanceFinder3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = distanceFinder;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		50062529182315BB0025500A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/distanceFinder3.app/distanceFinder3";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "distanceFinder3/distanceFinder3-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "distanceFinder3Tests/distanceFinder3Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5006252A182315BB0025500A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/distanceFinder3.app/distanceFinder3";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "distanceFinder3/distanceFinder3-Prefix.pch";
+				INFOPLIST_FILE = "distanceFinder3Tests/distanceFinder3Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		500624EE182315BB0025500A /* Build configuration list for PBXProject "distanceFinder3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50062523182315BB0025500A /* Debug */,
+				50062524182315BB0025500A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50062525182315BB0025500A /* Build configuration list for PBXNativeTarget "distanceFinder3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50062526182315BB0025500A /* Debug */,
+				50062527182315BB0025500A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50062528182315BB0025500A /* Build configuration list for PBXNativeTarget "distanceFinder3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50062529182315BB0025500A /* Debug */,
+				5006252A182315BB0025500A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 500624EB182315BB0025500A /* Project object */;
+}

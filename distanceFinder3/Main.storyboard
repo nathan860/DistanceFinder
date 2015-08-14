@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F6a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Cd7-j9-Zl6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="lAj-bz-egA">
+            <objects>
+                <navigationController id="Cd7-j9-Zl6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u1z-0j-pKg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HTt-2J-eDP" kind="relationship" relationship="rootViewController" id="2ac-ix-Vgo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baT-9D-bO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40" y="-1021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dJx-KE-TS3">
+            <objects>
+                <viewController id="HTt-2J-eDP" customClass="NPKViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="alc-1Z-dcG"/>
+                        <viewControllerLayoutGuide type="bottom" id="1UQ-cM-J3C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KJg-f8-qde">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FrD-Pv-wUR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8o1-El-vwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="-1021"/>
+        </scene>
+        <!--Distance -->
+        <scene sceneID="z0v-yd-FAY">
+            <objects>
+                <viewController id="Yng-Sp-XeX" customClass="NPKViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3e3-VM-B7i"/>
+                        <viewControllerLayoutGuide type="bottom" id="ayz-9g-Sa3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WCv-1B-Mfm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1aH-8R-gKE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="saT-c2-H8s" appends="YES" id="2IO-09-RdR"/>
+                                </connections>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-N8-16a">
+                                <rect key="frame" x="64" y="75" width="193" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <action selector="searchDoneEdit:" destination="Yng-Sp-XeX" eventType="editingDidEndOnExit" id="Y5y-nR-Ty9"/>
+                                    <outlet property="delegate" destination="WCv-1B-Mfm" id="gxJ-Ao-Pj2"/>
+                                </connections>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VAv-Du-eQh">
+                                <rect key="frame" x="0.0" y="480" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="mmk-tO-nyl">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eRB-9x-TjV">
+                                            <rect key="frame" x="260" y="498" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="deleteRect.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="deleteArea:" destination="Yng-Sp-XeX" eventType="touchUpInside" id="8nN-Iu-TjZ"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="BcJ-d4-2h0">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gvR-u8-WyR">
+                                            <rect key="frame" x="251" y="451" width="69" height="54"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="3- x w: pin.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="deletePin:" destination="Yng-Sp-XeX" eventType="touchUpInside" id="W5E-4g-beD"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem image="locate.png" style="plain" id="QMr-NE-zcc"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1aH-8R-gKE" firstAttribute="leading" secondItem="WCv-1B-Mfm" secondAttribute="leading" id="6mq-Va-h30"/>
+                            <constraint firstItem="1aH-8R-gKE" firstAttribute="top" secondItem="WCv-1B-Mfm" secondAttribute="top" id="XaM-fx-Z1y"/>
+                            <constraint firstAttribute="bottom" secondItem="1aH-8R-gKE" secondAttribute="bottom" id="bKN-VR-pzE"/>
+                            <constraint firstAttribute="trailing" secondItem="1aH-8R-gKE" secondAttribute="trailing" id="eKq-Dn-0l4"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Distance " id="JIp-cN-cdO">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="bd7-8O-Jgw">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AIV-Wm-SiG">
+                                <rect key="frame" x="16" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertButton:" destination="Yng-Sp-XeX" eventType="touchUpInside" id="fRt-Li-KJm"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="convertButton:" destination="Yng-Sp-XeX" id="THm-5A-9VP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="deleteArea" destination="eRB-9x-TjV" id="qdp-ow-OVH"/>
+                        <outlet property="deletePin" destination="gvR-u8-WyR" id="rGL-QK-iSL"/>
+                        <outlet property="mainMap" destination="1aH-8R-gKE" id="VHs-4j-YgQ"/>
+                        <outlet property="searchField" destination="wgg-N8-16a" id="wqg-oC-qeT"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="saT-c2-H8s">
+                    <connections>
+                        <action selector="handleTap:" destination="Yng-Sp-XeX" id="fBL-kA-8TE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELz-cA-ize" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1275" y="-297"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3- x w: pin.png" width="50" height="50"/>
+        <image name="deleteRect.png" width="50" height="50"/>
+        <image name="locate.png" width="40" height="40"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
